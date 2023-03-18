@@ -9,7 +9,6 @@ import HistoryScreen from './src/screens/Game/HistoryScreen'
 import HistoryPlayerScreen from './src/screens/Game/HistoryPlayerScreen'
 import * as Font from 'expo-font';
 import { Asset } from 'expo-asset';
-import HowToScreen from './src/screens/Home/HowToScreen';
 import * as Color from './global/Color'
 import GameTypeScreen from './src/screens/Home/GameTypeScreen';
 import * as SplashScreenExpo from 'expo-splash-screen';
@@ -27,12 +26,12 @@ const HomeStack = () => {
     <Home.Navigator 
         initialRouteName="Main"
         screenOptions={{
-          headerShown: false,
-          presentation: 'modal'
+          headerShown: false
         }}>
         <Home.Screen name="Main" component={HomeScreen} />
         <Home.Screen name="About" component={AboutScreen} />
-        <Home.Screen name="How" component={HowToScreen} />
+        <Home.Screen name='Previous' component={PreviousStack} />
+        <Home.Screen name='Type' component={GameTypeStack} />
     </Home.Navigator>
   )
 }
@@ -120,9 +119,6 @@ class App extends React.Component {
   // Initialize the App Screen state
   constructor() {
     super();
-    this.state = {
-      loading: true,
-    };
   }
 
   // Loads all assets before screen renders
@@ -142,8 +138,6 @@ class App extends React.Component {
     await Font.loadAsync({
       BalsamiqSans: require('./assets/fonts/BalsamiqSans-Regular.ttf')
     });
-    
-    this.setState({loading: false})
 }
 
   // Allows for fading between screens
@@ -161,7 +155,6 @@ class App extends React.Component {
 
   // Renders the jsx for the UI
   render() {
-    // TODO should be a loading screen
     return( 
       <NavigationContainer>
            <RootStack.Navigator screenOptions={{
@@ -175,8 +168,6 @@ class App extends React.Component {
               options={{ headerShown: false }}
             />
             <RootStack.Screen name='Home' component={HomeStack} />
-            <RootStack.Screen name='Previous' component={PreviousStack} />
-            <RootStack.Screen name='Type' component={GameTypeStack} />
             <RootStack.Screen name='Solo' component={SoloStack} />
             <RootStack.Screen name='Game' component={GameStack} />
          </RootStack.Navigator>

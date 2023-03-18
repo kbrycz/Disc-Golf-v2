@@ -37,7 +37,7 @@ class SoloScreen extends React.Component {
 
     // Return back to main menu
     quit = () => {
-        this.props.navigation.navigate('Home')
+        this.props.navigation.navigate('Main', {screen: "Home"})
     }
 
     // Erase all stats from the players and reset the rounds
@@ -87,7 +87,7 @@ class SoloScreen extends React.Component {
         let date = new Date()
         let game = {
             id: uuid.v4(),
-            date: date.getMonth() + "/" + date.getDay() + '/' + (date.getFullYear().toString().slice(2)),
+            date: (date.getMonth() + 1) + "/" + date.getDate() + '/' + (date.getFullYear().toString().slice(2)),
             location: this.state.location === "" ? "Unknown" : this.state.location,
             score: this.state.score,
             history: history

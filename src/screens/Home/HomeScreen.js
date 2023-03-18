@@ -3,6 +3,9 @@ import {View, StyleSheet, Text, Dimensions, TouchableOpacity, Share, Linking, Im
 import * as Color from '../../../global/Color'
 import SimpleModalComponent from '../../components/SimpleModalComponent'
 import CircleComponent from '../../components/CircleComponent';
+import { Feather } from '@expo/vector-icons'; 
+
+
 
 class HomeScreen extends React.Component {
 
@@ -48,7 +51,7 @@ class HomeScreen extends React.Component {
         return (
             <View style={styles.background}>
                 <CircleComponent isWhite={false} />
-                <Text style={styles.headerText}>Disc Golf - All in One</Text>
+                <Text style={styles.headerText}>The Ultimate Scorekeeper</Text>
                 <View>
                     <Image
                         style={styles.image} 
@@ -61,22 +64,16 @@ class HomeScreen extends React.Component {
                 <TouchableOpacity style={styles.howToPlay} onPress={() => this.props.navigation.navigate('Previous')}>
                     <Text style={styles.howToPlayText}>History</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.howToPlay} onPress={() => this.props.navigation.navigate('How')}>
-                    <Text style={styles.howToPlayText}>How to Play</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.howToPlay} onPress={() => this.props.navigation.navigate('About')}>
-                    <Text style={styles.howToPlayText}>About</Text>
-                </TouchableOpacity>
                 <View style={styles.iconView}>
-                    {/* <TouchableOpacity onPress={this.shareButton}>
+                    <TouchableOpacity onPress={this.shareButton}>
                         <Feather name="share-2" style={styles.icon} />
                     </TouchableOpacity>
                     <TouchableOpacity onPress={this.rateApp}>
                         <Feather name="star" style={styles.icon}/>
-                    </TouchableOpacity> */}
-                    {/* <TouchableOpacity onPress={() => this.props.navigation.navigate('About')}>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('About')}>
                         <Feather name="info" style={styles.icon}/>
-                    </TouchableOpacity> */}
+                    </TouchableOpacity>
                 </View>
                 <SimpleModalComponent modalVisible={this.state.modalVisible} 
                                       setModalVisible={this.setModalVisible} 
@@ -121,7 +118,7 @@ const styles = StyleSheet.create({
         marginLeft: Dimensions.get('window').width * .15,
         marginRight: Dimensions.get('window').width * .15,
         backgroundColor: '#fff',
-        paddingVertical: Dimensions.get('window').width * .03,
+        paddingVertical: Dimensions.get('window').width * .05,
         paddingHorizontal: Dimensions.get('window').width * .07,
         borderWidth: 4,
         borderColor: Color.MAIN,
@@ -134,11 +131,11 @@ const styles = StyleSheet.create({
         fontFamily: 'BalsamiqSans'
     },
     howToPlay: {
+        marginTop: Dimensions.get('window').height * .02,
         width: Dimensions.get('window').width * .7,
         marginLeft: Dimensions.get('window').width * .15,
         marginRight: Dimensions.get('window').width * .15,
-        marginTop: Dimensions.get('window').height * .02,
-        paddingVertical: Dimensions.get('window').width * .015,
+        paddingVertical: Dimensions.get('window').width * .05,
         paddingHorizontal: Dimensions.get('window').width * .07,
         borderWidth: 3,
         borderColor: '#fff',
