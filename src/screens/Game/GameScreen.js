@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, StyleSheet, Text, TouchableOpacity, Dimensions, SafeAreaView, KeyboardAvoidingView, ScrollView} from 'react-native'
+import {View, StyleSheet, Dimensions, SafeAreaView, KeyboardAvoidingView, ScrollView} from 'react-native'
 import * as Color from '../../../global/Color'
 import AddPlayerComponent from '../../components/AddPlayerComponent'
 import CircleComponent from '../../components/CircleComponent'

@@ -18,28 +18,26 @@ class HomeScreen extends React.Component {
     }
 
     // Lets users share the app with other people
-    // TODO need to update this to new link
     shareButton = async () => {
         console.log("share")
-        // try {
-        //     const result = await Share.share({
-        //         url: 'https://celsius.onelink.me/EyfO/ios?pid=website&c=download-app&af_js_web=true',
-        //     });
+        try {
+            const result = await Share.share({
+                url: 'https://apps.apple.com/us/app/the-ultimate-scorekeeper/id6446509225',
+            });
 
-        // } 
-        // catch (error) {
-        //     this.setState({
-        //         text: 'Unable to share app. Please try again!',
-        //         modalVisible: true,
-        //     })
-        // }
+        } 
+        catch (error) {
+            this.setState({
+                text: 'Unable to share app. Please try again!',
+                modalVisible: true,
+            })
+        }
     }
 
     // Sends the user to the app store to rate the app
-    // TODO need to update this to new link
     rateApp = async () => {
         console.log("rate app")
-        // Linking.openURL('https://apps.apple.com/us/app/celsius-safe-crypto-platform/id1387885523');
+        Linking.openURL('https://apps.apple.com/us/app/the-ultimate-scorekeeper/id6446509225');
     }
 
     // Sets the status of simple modal
