@@ -30,7 +30,7 @@ class AboutScreen extends React.Component {
                                             It can be used for basically any scorekeeping purposes: golf, disc golf, mini golf, etc.
                                             The main benefit of this app is the convenient button scorekeeping compared to using a pencil and paper
                                             and then having to do the constant math in your head!</Text>
-                    <Text style={styles.version}>Version 1.0.2</Text>
+                    <Text style={styles.version}>Version 1.0.6</Text>
                 </SafeAreaView>
             </View>
         )
