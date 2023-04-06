@@ -2,31 +2,31 @@
 
 The Ultimate Scorekeeper is an Expo React Native app designed to revolutionize the way you keep score in various games and activities, such as golf, disc golf, mini golf, basketball, soccer, poker, and more. With its all-button interface, tracking scores has never been easier!
 
-# Features
+## Features
 
-All-button interface for easy score tracking
-Ad-free experience
-Perfect for beginners and experts alike
-Versatile and adaptable for various games and activities
-Sleek design and user-friendly interface
-Getting Started
+- All-button interface for easy score tracking
+- Ad-free experience
+- Perfect for beginners and experts alike
+- Versatile and adaptable for various games and activities
+- Sleek design and user-friendly interface
+- Getting Started
 
-To get started with The Ultimate Scorekeeper, simply follow these steps:
+### To get started with The Ultimate Scorekeeper, simply follow these steps:
 
-Clone the repository:
+#### Clone the repository:
 bash
-Copy code
+#### Copy code
 git clone https://github.com/your-username/ultimate-scorekeeper.git
-Install dependencies:
+#### Install dependencies:
 bash
-Copy code
+#### Copy code
 cd ultimate-scorekeeper
 npm install
-Run the app using Expo:
+#### Run the app using Expo:
 sql
-Copy code
+#### Copy code
 expo start
-Contributing
+## Contributing
 
 We welcome contributions to The Ultimate Scorekeeper! To contribute, please follow these steps:
 
