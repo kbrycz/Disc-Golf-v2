@@ -16,14 +16,18 @@ The Ultimate Scorekeeper is an Expo React Native app designed to revolutionize t
 #### Clone the repository:
 bash
 #### Copy code
-`git clone https://github.com/your-username/ultimate-scorekeeper.git`
+```
+git clone https://github.com/your-username/ultimate-scorekeeper.git
+```
 #### Install dependencies:
-`bash`
-#### Copy code
-`cd ultimate-scorekeeper`
-`npm install`
+```
+cd ultimate-scorekeeper
+npm install
+```
 #### Run the app using Expo:
-`expo start`
+```
+expo start
+```
 ## Contributing
 
 We welcome contributions to The Ultimate Scorekeeper! To contribute, please follow these steps:
